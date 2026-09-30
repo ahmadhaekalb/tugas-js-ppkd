@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Javascript</title>
+</head>
+<body>
+  <script>
+     
+     /* berat standar 10kg
+     jika tujuannya ke bogor, tarifnya Rp2.000/kg
+     jika tujuannya ke depok, tarifnya Rp4.000/kg
+     selain bogor dan depok, tarifnya Rp6.000/kg
+     total biaya = berat paket x tarif per kg
+     setelah menekan tombol cek tarif, muncul hasil hitungnya */
+
+      let berat= 10;
+      let desc_berat = "10kg";
+      console.log("Berat Standar", " : ", desc_berat);
+
+      const Depok = 4000;
+      const desc_Depok = "Rp4.000/kg";
+      const selain = 6000;
+      const desc_selain = "Rp6.000/kg";
+      const Bogor = 2000;
+      const desc_Bogor = "Rp2.000/kg";
+      let Kotatujuan =`
+      Tarif  : Berat Standar (10kg) x Tarif per kg
+      Depok  : ${desc_Depok}
+      Bogor  : ${desc_Bogor}
+      Selain Depok Bogor : ${desc_selain}
+      `;
+      console.log(Kotatujuan);
+
+      const kota = "Bogor";
+      const pilihan_kota = "Bogor";
+
+      //if untuk pilihan kota
+       if (pilihan_kota === "Bogor")
+      console.log("Anda memilih Bogor");
+
+      else if (pilihan_kota === "Depok")
+      console.log("Anda Memilih Depok");
+
+      else
+      console.log("Anda memilih lokasi selain Depok dan Bogor");
+
+      // if untuk harga
+      if (kota === "Bogor")
+      console.log("Jika ke Bogor, total harganya adalah :", desc_Bogor ,"*",berat, "Rp","=",Bogor*berat);
+
+      else if (kota==="Depok")
+      console.log("Jika ke Depok, total harganya adalah :", desc_Depok ,"*",berat, "Rp","=",Depok*berat);
+
+      else
+      console.log("Jika selain ke Depok dan Bogor, total harganya adalah :", desc_selain ,"*",berat,"=", "Rp",selain*berat);
+
+
+
+  </script>
+</body>
+</html>

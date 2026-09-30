@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas JS (Passing Grade)</title>
+</head>
+
+<body>
+
+  <script>
+
+    /*
+    
+    nilai teori 75
+    nilai praktek minimal 80
+    kehadiran minimal 90%
+    tidak memiliki pelanggaran berat = true false
+    jika rata-rata >90 maka lulus dengan predikat sangat baik
+    jika rata-rata >85 maka lulus dengan predikat baik
+    selain itu hanya dinyatakan lulus
+    
+    jika kehadiran >90% tidak lulus
+    nilai teori >75 tidak lulus
+    nilai praktek kurang dari 80 tidak lulus
+    jika ada pelanggaran berat tidak lulus
+    
+    */
+
+    let nama="Grand";
+        let nilai_teori=90;
+        let nilai_praktek=90;
+        let kehadiran = 90;
+        let pelanggaran_berat =false;
+
+        let rata_rata= (nilai_teori+nilai_praktek)/2;
+        // console.log(rata_rata);
+
+        let status= "";
+        let predikat="";
+        if (nilai_teori < 75 ) {
+            status="tidak lulus(Teori kurang)"; 
+        }else if(nilai_praktek <80){
+            status=" tidak lulus (praktek kurang)";
+        }else if (kehadiran <90) {
+            status="tidak lulus (kehadiran kurang)";
+        }else if(pelanggaran_berat == true ){
+            status="tidak lulus(pelanggaran disiplin)";
+        }
+        else{
+            status="lulus";
+
+            if (rata_rata >90) {
+                status="lulus dengan predikat sangat baik";
+            }else if(rata_rata >85) {
+                status="lulus dengan predikat baik";
+            }
+
+        }
+
+        console.log(`nama :${nama}`);
+        console.log(`rata-rata :${rata_rata}`);
+        console.log(`status :${status}`);
+
+        
+
+  </script>
+
+</body>
+
+</html>
